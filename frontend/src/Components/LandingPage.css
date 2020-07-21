@@ -1,0 +1,11 @@
+.lpMainTitle {
+  text-align: center;
+  font-size: 3rem;
+  margin: 40px 0
+}
+
+.lpContent {
+  margin: 0 auto;
+  width: 60%;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,15 @@
+.eventContainer {
+  margin: 0 auto;
+  width: 60%
+}
+
+.eventPageTitle {
+  text-align: center;
+  font-size: 3rem;
+  margin: 40px 0
+}
+
+.eventTitle {
+  text-align: center;
+  font-size: 2rem;
+}
