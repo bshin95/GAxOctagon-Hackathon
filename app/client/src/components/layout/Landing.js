@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
-import Carousel from "../Carousel/Carousel"
 
 class Landing extends Component {
   render() {
@@ -16,7 +15,6 @@ class Landing extends Component {
               checked-in.
             </p>
             <br />
-            <Carousel />
             <div>
               <Link
                 to="/register"
