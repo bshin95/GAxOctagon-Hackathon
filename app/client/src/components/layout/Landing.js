@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
+import Carousel from "../Carousel/Carousel"
 
 class Landing extends Component {
   render() {
@@ -15,7 +16,8 @@ class Landing extends Component {
               checked-in.
             </p>
             <br />
-            <div className="col s6">
+            <Carousel />
+            <div>
               <Link
                 to="/register"
                 style={{
@@ -25,20 +27,20 @@ class Landing extends Component {
                 }}
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3"
               >
-                Register
+                Create an account
               </Link>
             </div>
-            <div className="col s6">
+            <div>
               <Link
                 to="/login"
-                style={{
-                  width: "140px",
-                  borderRadius: "3px",
-                  letterSpacing: "1.5px",
-                }}
-                className="btn btn-large btn-flat waves-effect white black-text"
+                // style={{
+                //   width: "140px",
+                //   borderRadius: "3px",
+                //   letterSpacing: "1.5px",
+                // }}
+                // className="btn btn-large btn-flat waves-effect white black-text"
               >
-                Log In
+                Already have an account? Sign In
               </Link>
             </div>
           </div>
