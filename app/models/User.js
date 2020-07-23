@@ -19,6 +19,10 @@ const UserSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  gender: {
+    type: String,
+    required: false,
+  },
 })
 
 module.exports = User = mongoose.model("users", UserSchema)
