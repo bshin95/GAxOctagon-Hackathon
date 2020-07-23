@@ -1,49 +1,68 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
+import Slider from "../Carousel/Slider"
+import LogoComponent from "../Logo/LogoComponent"
+import styled from "styled-components"
+
+const LandingPage = styled.div`
+  color: #17014c;
+`
+
+const RegisterLink = styled(Link)`
+  border-radius: 25px;
+  /* padding: 20px; */
+  padding: 2rem 3rem;
+  width: 200px;
+  height: 150px;
+  background: #fa818a;
+  color: #17014c;
+  font-size: 2rem;
+  @media (max-width: 375px) {
+    font-size: 1.5rem;
+  }
+`
+
+const LoginLink = styled(Link)`
+  font-size: 2rem;
+  color: #17014c;
+  text-decoration: underline;
+  @media (max-width: 375px) {
+    font-size: 1.5rem;
+  }
+`
+
+const ButtonContainer = styled.div`
+  text-align: center;
+`
+
+const ButtonDiv = styled.div`
+  padding: 3rem 0;
+  font-size: 2rem;
+  color: #17014c;
+  @media (max-width: 375px) {
+    font-size: 1.5rem;
+  }
+`
 
 class Landing extends Component {
   render() {
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
-          <div className="col s12 center-align">
-            <h4>
-              <b>Check-In</b> to all your favorite events with Events Manager
-            </h4>
-            <p className="flow-text grey-text text-darken-1">
-              Easily find your favorite events and let your friends know you've
-              checked-in.
-            </p>
-            <br />
-            <div>
-              <Link
-                to="/register"
-                style={{
-                  width: "140px",
-                  borderRadius: "3px",
-                  letterSpacing: "1.5px",
-                }}
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-              >
-                Create an account
-              </Link>
-            </div>
-            <div>
-              <Link
-                to="/login"
-                // style={{
-                //   width: "140px",
-                //   borderRadius: "3px",
-                //   letterSpacing: "1.5px",
-                // }}
-                // className="btn btn-large btn-flat waves-effect white black-text"
-              >
-                Already have an account? Sign In
-              </Link>
-            </div>
-          </div>
+      <LandingPage>
+        <div>
+          <LogoComponent />
         </div>
-      </div>
+        <div>
+          <Slider />
+        </div>
+        <ButtonContainer>
+          <ButtonDiv>
+            <RegisterLink to="/register">Create Account</RegisterLink>
+          </ButtonDiv>
+          <ButtonDiv>
+            Already have an account? <LoginLink to="/login">Sign In</LoginLink>
+          </ButtonDiv>
+        </ButtonContainer>
+      </LandingPage>
     )
   }
 }

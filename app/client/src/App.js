@@ -7,17 +7,18 @@ import { setCurrentUser, logoutUser } from "./actions/authActions"
 import { Provider } from "react-redux"
 import store from "./store"
 
-import Navbar from "./components/layout/Navbar"
 import Landing from "./components/layout/Landing"
 import Register from "./components/auth/Register"
 import Login from "./components/auth/Login"
 import PrivateRoute from "./components/private-route/PrivateRoute"
 import Dashboard from "./components/dashboard/Dashboard"
 
-import HealthBar from "./components/HealthComponent/HealthBar"
-import CovidComponent from "./components/HealthComponent/CovidComponent"
-
 import "./App.css"
+import styled from "styled-components"
+
+const AppContainer = styled.div`
+  padding: 1rem;
+`
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -43,22 +44,14 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div className="App">
-            {/* <Route exact path="/covid19response" render={() => <HealthBar />} /> */}
-            <HealthBar />
-            <Navbar />
+          <AppContainer>
             <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
-            <Route
-              exact
-              path="/covid19response"
-              render={() => <CovidComponent />}
-            />
-          </div>
+          </AppContainer>
         </Router>
       </Provider>
     )
