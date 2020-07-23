@@ -1,23 +1,13 @@
-const express = require("express")
-// const router = express.Router()
-// const bcrypt = require("bcryptjs")
-// const jwt = require("jsonwebtoken")
-// const keys = require("../../config/keys")
-// const passport = require("passport")
+const { Router } = require('express')
+const controllers = require('../controllers')
+const restrict = require('../helpers/index')
 
-const Event = require("../../models/Event")
+const router = Router()
 
-db.on("error", console.error.bind(console, "MongoDB connection error:"))
+router.get('/events', controllers.getEvents)
+router.get('/events/:id', controllers.getEvent)
+router.post('/events', restrict, controllers.createEvent)
+router.put('/events/:id', restrict, controllers.updateEvent)
+router.delete('/events/:id', restrict, controllers.deleteEvent)
 
-const getAllEvents = async (req, res) => {
-  try {
-    const events = await Event.find()
-    return res.status(200).json({ events })
-  } catch (error) {
-    return res.status(500).send(error.message)
-  }
-}
-
-module.exports = {
-  getAllEvents,
-}
+module.exports = router
