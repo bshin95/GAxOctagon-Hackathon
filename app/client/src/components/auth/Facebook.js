@@ -1,11 +1,11 @@
 import React, { Component } from "react"
 import FacebookLogin from "react-facebook-login"
-import styled from "styled-components"
+// import styled from "styled-components"
 
-const Icon = styled.img`
-  width: 15%;
-  height: 15%;
-`
+// const Icon = styled.img`
+//   width: 15%;
+//   height: 15%;
+// `
 
 export default class Facebook extends Component {
   state = {

@@ -6,7 +6,7 @@ import { loginUser } from "../../actions/authActions"
 import classnames from "classnames"
 import LogoComponent from "../Logo/LogoComponent"
 import styled from "styled-components"
-import Facebook from "./Facebook"
+// import Facebook from "./Facebook"
 import Google from "./Google"
 
 const Btn = styled.button`
@@ -141,7 +141,7 @@ class Login extends Component {
         </div>
         <div>
           <SocialLogin>
-            <Facebook />
+            {/* <Facebook /> */}
           </SocialLogin>
           <SocialLogin>
             <Google />
