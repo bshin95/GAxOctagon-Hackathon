@@ -1,0 +1,12 @@
+.myevents-title {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.event1 {
+  border: 2px solid black;
+  width: 90%;
+  background: url('./EventPhotos/mlb.jpg');
+  height: 400px;
+}
