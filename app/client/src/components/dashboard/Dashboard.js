@@ -112,6 +112,7 @@ class Dashboard extends Component {
           </LogoutButton>
         </LogoutContainer>
         <Route path="/dashboard" component={Footer} />
+
       </>
     )
   }

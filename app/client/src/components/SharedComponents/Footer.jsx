@@ -10,11 +10,13 @@ export default class Footer extends Component {
     return (
       <div className="footer-container">
         <div className="footer-button">
-          <img className="footer-icon" src={f1} />
-          <p>Explore</p>
+          <Link to='/dashboard'>
+            <img className="footer-icon" src={f1} />
+            <p>Explore</p>
+          </Link>
         </div>
         <div className="footer-button">
-          <Link to="/events">
+          <Link to="/dashboard/myevents">
             <img className="footer-icon" src={f2} />
             <p>My Events</p>
           </Link>

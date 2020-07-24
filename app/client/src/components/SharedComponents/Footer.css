@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-evenly;
   color: #17014c;
-  margin-top: auto;
-  height: 20vh;
-  width: 100vw;
+  margin: 0 auto;
+  height: 100px;
+  width: 80vw;
 }
 
 .footer-button {
