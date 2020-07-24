@@ -102,7 +102,8 @@ class Statistics extends Component {
               <EventDescription>
                 <p>
                   <b>Number of Attendees: </b>
-                  {event.attendees.length}
+                  10
+                  {/* {event.attendees.length} */}
                 </p>
               </EventDescription>
               <hr />
