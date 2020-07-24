@@ -2,6 +2,24 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import { Pie, Line } from "react-chartjs-2"
 import { getEvent } from "../../actions/eventActions"
+import LogoComponent from "../Logo/LogoComponent"
+import styled from "styled-components"
+
+const StatsContainer = styled.div`
+  text-align: center;
+  padding: 0 1rem;
+`
+
+const EventDescription = styled.div`
+  text-align: left;
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
+`
+
+const StyledH2 = styled.h2`
+  text-align: left;
+  font-size: 1.5rem;
+`
 
 class Statistics extends Component {
   constructor(props) {
@@ -22,7 +40,7 @@ class Statistics extends Component {
       datasets: [
         {
           data: [40, 60],
-          backgroundColor: ["blue", "pink"],
+          backgroundColor: ["navy", "mediumpurple"],
         },
       ],
     }
@@ -31,7 +49,7 @@ class Statistics extends Component {
       labels: ["0", "10", "20", "30", "40", 50, "60", "70"],
       datasets: [
         {
-          label: "My First dataset",
+          label: "Age",
           fill: false,
           lineTension: 0.1,
           backgroundColor: "rgba(75,192,192,0.4)",
@@ -56,25 +74,54 @@ class Statistics extends Component {
 
     return (
       <div>
-        {event && (
-          <div>
-            <h1>Event Statistics</h1>
-            <p>Event Name: {event.name}</p>
-            <p>Location: {event.location}</p>
-            <p>Date: {event.date}</p>
-            <p>Time: {event.time}</p>
-            <hr />
-            Number of Attendees: {event.attendees.length}
-            <hr />
-            <div style={{ height: "300px", width: "300px" }}>
-              <Pie data={pieData} />
+        <LogoComponent />
+        <StatsContainer>
+          {event && (
+            <div>
+              <h1>Event Statistics</h1>
+              <hr />
+              <EventDescription>
+                <p>
+                  <b>Event Name: </b>
+                  {event.name}
+                </p>
+                <p>
+                  <b>Location: </b>
+                  {event.location}
+                </p>
+                <p>
+                  <b>Date: </b>
+                  {event.date}
+                </p>
+                <p>
+                  <b>Time: </b>
+                  {event.time}
+                </p>
+              </EventDescription>
+              <hr />
+              <EventDescription>
+                <p>
+                  <b>Number of Attendees: </b>
+                  {event.attendees.length}
+                </p>
+              </EventDescription>
+              <hr />
+              <StyledH2>
+                <b>Gender</b>
+              </StyledH2>
+              <div style={{ height: "200px", width: "350px" }}>
+                <Pie data={pieData} />
+              </div>
+              <hr />
+              <StyledH2>
+                <b>Age</b>
+              </StyledH2>
+              <div style={{ height: "200px", width: "350px" }}>
+                <Line data={lineData} />
+              </div>
             </div>
-            <hr />
-            <div style={{ height: "400px", width: "700px" }}>
-              <Line data={lineData} />
-            </div>
-          </div>
-        )}
+          )}
+        </StatsContainer>
       </div>
     )
   }

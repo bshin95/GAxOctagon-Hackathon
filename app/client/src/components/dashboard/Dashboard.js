@@ -7,6 +7,37 @@ import Footer from "../SharedComponents/Footer"
 import { getEvents } from "../../services/event"
 import DashboardNAV from "./DashboardNAV"
 import { Route } from "react-router-dom"
+import styled from "styled-components"
+
+const Search = styled.div`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`
+
+const SearchBar = styled.input`
+  border: none;
+`
+
+const SearchContainer = styled.form`
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  width: 75%;
+  border-radius: 15px;
+`
+
+const LogoutContainer = styled.div`
+  text-align: center;
+  padding: 1.5rem;
+`
+
+const LogoutButton = styled.button`
+  text-align: center;
+  background-color: #f8818a;
+  padding: 1rem 4rem;
+  border-radius: 25px;
+`
 
 class Dashboard extends Component {
   constructor() {
@@ -37,21 +68,17 @@ class Dashboard extends Component {
             <p className="dboard-text">
               Hi {user.name.split(" ")[0]}!<b />
             </p>
-            <button
-              onClick={this.onLogoutClick}
-              // className=“btn btn-large waves-effect waves-light hoverable blue accent-3”
-            >
-              Logout
-            </button>
             <p className="dboard-text">Explore nearby events:</p>
-            <form className="search-bar">
-              <input
-                className="search-input"
-                name="Search"
-                placeholder="Search for events..."
-                type="text"
-              />
-            </form>
+            <Search>
+              <SearchContainer className="search-bar">
+                <SearchBar
+                  className="search-input"
+                  name="Search"
+                  placeholder="Search for events..."
+                  type="text"
+                />
+              </SearchContainer>
+            </Search>
             <DashboardNAV />
           </div>
           <div className="events e1">
@@ -76,6 +103,16 @@ class Dashboard extends Component {
             </div>
           </div>
         </div>
+        <LogoutContainer>
+          <LogoutButton
+            onClick={this.onLogoutClick}
+            // className=“btn btn-large waves-effect waves-light hoverable blue accent-3”
+          >
+            Logout
+          </LogoutButton>
+        </LogoutContainer>
+        <Route path="/dashboard" component={Footer} />
+
       </>
     )
   }

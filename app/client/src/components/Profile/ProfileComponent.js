@@ -5,12 +5,27 @@ import Bio from "./Bio"
 import Description from "./Description"
 import { updateUser, getUser } from "../../actions/authActions"
 
+const ProfileContainer = styled.div`
+  padding: 0 1rem;
+`
+
 const UpperContainer = styled.div`
   display: flex;
 `
 
 const LowerContainer = styled.div`
   text-align: left;
+`
+
+const ButtonContainer = styled.div`
+  text-align: center;
+`
+
+const StyledButton = styled.button`
+  text-align: center;
+  background-color: #f8818a;
+  padding: 1rem 2.5rem;
+  border-radius: 25px;
 `
 
 class ProfileComponent extends Component {
@@ -81,14 +96,13 @@ class ProfileComponent extends Component {
       options,
     } = this.state
     return (
-      <div>
-        <UpperContainer>
-          <Bio bio={bio} />
-        </UpperContainer>
+      <ProfileContainer>
         <LowerContainer>
           <Description name={name} age={age} location={location} />
         </LowerContainer>
-
+        <UpperContainer>
+          <Bio bio={bio} />
+        </UpperContainer>
         <form onSubmit={this.handleFormSubmit}>
           <div>
             <label htmlFor="name">Name</label>
@@ -189,9 +203,12 @@ class ProfileComponent extends Component {
             <label htmlFor="bio">Bio</label>
             <input id="bio" value={bio} onChange={this.handleInputChange} />
           </div>
-          <button>Submit</button> -<button type="cancel">Cancel</button>
+          <ButtonContainer>
+            <StyledButton>Submit</StyledButton>
+            <StyledButton type="cancel">Cancel</StyledButton>
+          </ButtonContainer>
         </form>
-      </div>
+      </ProfileContainer>
     )
   }
 }
