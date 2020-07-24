@@ -1,10 +1,15 @@
 import React, { Component } from "react"
 import Layout from "./Layout.png"
+import styled from "styled-components"
+
+const Container = styled.div`
+  text-align: center;
+`
 
 class Map extends Component {
   render() {
     return (
-      <div>
+      <Container>
         <div>
           <h1>Venue Map</h1>
         </div>
@@ -18,7 +23,7 @@ class Map extends Component {
           <p>Food & Drinks</p>
           <p>Guest Services</p>
         </div>
-      </div>
+      </Container>
     )
   }
 }
