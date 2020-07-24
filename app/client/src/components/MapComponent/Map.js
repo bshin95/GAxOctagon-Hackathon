@@ -17,14 +17,14 @@ class Map extends Component {
         <div>
           <h1>Venue Map</h1>
         </div>
-        <div>
+        <div className="mapdiv">
           <MapLayout src={Layout}></MapLayout>
         </div>
         <div>
           <p>Entrance - Exits</p>
           <p>Restrooms</p>
           <p>Sanitizing Sanitation</p>
-          <p>Food & Drinks</p>
+          <p>Food {'&'} Drinks</p>
           <p>Guest Services</p>
         </div>
       </Container>
