@@ -46,10 +46,27 @@ class Dashboard extends Component {
             </form>
             <DashboardNAV />
           </div>
-          <div className="events e1"></div>
-          <div className="events e2"></div>
-          <div className="events e3"></div>
-          <div className="events"></div>
+          <div className="events e1">
+            <div className="e-container">
+              <p className="e-title">Mets VS. Yankees</p>
+              <p className="e-date">April 23, 2002</p>
+              <p className="e-purchased">StubHub</p>
+            </div>
+          </div>
+          <div className="events e2">
+            <div className="e-container">
+              <p className="e-title">Bad Bunny</p>
+              <p className="e-date">April 23, 2002</p>
+              <p className="e-purchased">StubHub</p>
+            </div>
+          </div>
+          <div className="events e3">
+            <div className="e-container">
+              <p className="e-title">Productcon</p>
+              <p className="e-date">April 23, 2002</p>
+              <p className="e-purchased">StubHub</p>
+            </div>
+          </div>
         </div>
         <Footer />
       </>

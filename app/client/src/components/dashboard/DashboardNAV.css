@@ -5,7 +5,8 @@
 
 .dbnav {
   color: #17014C;
-  margin: auto 0
+  margin: auto 0;
+  font-size: 1.5rem
 }
 
 .dbnav:focus {
@@ -15,5 +16,5 @@
 
 .dbplus {
   color: #FA818A;
-  font-size: 2.5rem
+  font-size: 2rem
 }
