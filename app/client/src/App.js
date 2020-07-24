@@ -22,6 +22,7 @@ import Footer from "./components/SharedComponents/Footer"
 import CheckIn from "./components/UserComponents/CheckIn"
 import CheckedIn from "./components/UserComponents/CheckedIn"
 import Map from "./components/MapComponent/Map"
+import Healthsafety from './components/HealthSafetyComponent/Healthsafety'
 
 const AppContainer = styled.div`
   /* padding: 1rem; */
@@ -76,6 +77,7 @@ class App extends Component {
                 component={CheckedIn}
               />
             </Switch>
+            <Route path="/dashboard/health" component={Healthsafety} />
             <Route path="/dashboard/map" component={Map} />
             <Route path="/dashboard" component={Footer} />
           </AppContainer>
