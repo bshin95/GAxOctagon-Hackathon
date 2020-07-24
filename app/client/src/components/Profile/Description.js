@@ -32,9 +32,6 @@ class Description extends Component {
         <Link to="/dashboard">
           <LogoComponent />
         </Link>
-        <PicContainer>
-          <ProPic src="https://images.unsplash.com/photo-1543486958-d783bfbf7f8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"></ProPic>
-        </PicContainer>
         <div>
           <Name>{name}</Name>
         </div>
