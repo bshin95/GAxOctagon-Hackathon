@@ -4,8 +4,22 @@ import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { logoutUser } from "../../actions/authActions"
 import Footer from "../SharedComponents/Footer"
+import { getEvents } from '../../services/event'
 
 class Dashboard extends Component {
+  constructor() {
+    super()
+    this.state = {
+      events: null
+    }
+  }
+
+  async componentDidMount() {
+    const events = await getEvents();
+    this.setState({ events });
+    console.log(events)
+  }
+
   onLogoutClick = (e) => {
     e.preventDefault()
     this.props.logoutUser()
@@ -14,19 +28,19 @@ class Dashboard extends Component {
   render() {
     const { user } = this.props.auth
 
+
     return (
       <>
-      <div className="dboard-container">
+        <div className="dboard-container">
           <div className="dboard-title">
-            <p>Hi {user.name.split(" ")[0]}!
-              <p className="dboard-title">Explore nearby events: </p>
-          </p>
-          
+            <p className="dboard-text">Hi {user.name.split(" ")[0]}!<b /></p>
+            <p className="dboard-text">Explore nearby events:</p>
+
+          </div>
+
         </div>
-      
-      </div>
         <Footer />
-        </>
+      </>
     )
   }
 }
