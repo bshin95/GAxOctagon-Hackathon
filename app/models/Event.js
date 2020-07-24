@@ -27,6 +27,10 @@ const EventSchema = new Schema({
     type: String,
     required: true,
   },
+  purchased: {
+    type: String,
+    required: true,
+  }
 })
 
 module.exports = User = mongoose.model("Events", EventSchema)

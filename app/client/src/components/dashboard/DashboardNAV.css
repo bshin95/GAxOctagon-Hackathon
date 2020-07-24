@@ -1,0 +1,20 @@
+.nav-Container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dbnav {
+  color: #17014C;
+  margin: auto 0;
+  font-size: 1.5rem
+}
+
+.dbnav:focus {
+  color: #FA818A;
+  text-decoration: underline;
+}
+
+.dbplus {
+  color: #FA818A;
+  font-size: 2rem
+}

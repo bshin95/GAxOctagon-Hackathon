@@ -9,7 +9,7 @@ const getToken = () => {
 let apiUrl
 
 const apiUrls = {
-  production: '',
+  production: 'http://localhost:3000/api',
   development: 'http://localhost:3000/api'
 }
 

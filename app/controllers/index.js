@@ -1,6 +1,6 @@
 const Event = require("../models/Event")
 const db = require("../db")
-require("dotenv").config()
+// require("dotenv").config()
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
