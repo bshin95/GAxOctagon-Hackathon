@@ -3,10 +3,8 @@ import "./Dashboard.css"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { logoutUser } from "../../actions/authActions"
-import Footer from "../SharedComponents/Footer"
 import { getEvents } from "../../services/event"
 import DashboardNAV from "./DashboardNAV"
-import { Route } from "react-router-dom"
 import styled from "styled-components"
 
 const Search = styled.div`
@@ -111,8 +109,6 @@ class Dashboard extends Component {
             Logout
           </LogoutButton>
         </LogoutContainer>
-        <Route path="/dashboard" component={Footer} />
-
       </>
     )
   }

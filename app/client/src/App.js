@@ -20,6 +20,7 @@ import "./App.css"
 import styled from "styled-components"
 import Footer from "./components/SharedComponents/Footer"
 import CheckIn from "./components/UserComponents/CheckIn"
+import CheckedIn from "./components/UserComponents/CheckedIn"
 
 const AppContainer = styled.div`
   /* padding: 1rem; */
@@ -70,6 +71,10 @@ class App extends Component {
                 path="/dashboard/checkin"
                 component={CheckIn}
               />
+              <PrivateRoute
+                exact
+                path="/dashboard/checkedin"
+                component={CheckedIn} />
             </Switch>
             <Route path="/dashboard" component={Footer} />
           </AppContainer>
