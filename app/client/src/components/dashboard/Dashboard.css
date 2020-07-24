@@ -92,6 +92,10 @@
   background-size: cover;
 }
 
+.search-bar {
+  border: none;
+}
+
 @media (max-width: 500px) {
   html {
     font-size: 10px;
