@@ -5,6 +5,7 @@ import { connect } from "react-redux"
 import { logoutUser } from "../../actions/authActions"
 import Footer from "../SharedComponents/Footer"
 import { getEvents } from '../../services/event'
+import DashboardNAV from './DashboardNAV'
 
 class Dashboard extends Component {
   constructor() {
@@ -35,9 +36,20 @@ class Dashboard extends Component {
           <div className="dboard-title">
             <p className="dboard-text">Hi {user.name.split(" ")[0]}!<b /></p>
             <p className="dboard-text">Explore nearby events:</p>
-
+            <form className="search-bar">
+              <input
+                className="search-input"
+                name="Search"
+                placeholder="Search for events..."
+                type="text"
+              />
+            </form>
+            <DashboardNAV />
           </div>
-
+          <div className="events e1"></div>
+          <div className="events e2"></div>
+          <div className="events e3"></div>
+          <div className="events"></div>
         </div>
         <Footer />
       </>

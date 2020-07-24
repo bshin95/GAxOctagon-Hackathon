@@ -5,9 +5,52 @@
 }
 
 .dboard-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .dboard-text {
   color: #17014C
+}
+
+:root {
+  padding: 0;
+  margin: 0
+}
+
+.events {
+  border: 2px solid black;
+  height: 200px;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 6%;
+}
+
+.e1 {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.45), 
+    rgba(255, 255, 255, 0.45)
+  ), url('./Images/mlb.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.e2 {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.45), 
+    rgba(255, 255, 255, 0.45)
+  ), url('./Images/badbunny.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.e3 {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.45), 
+    rgba(255, 255, 255, 0.45)
+  ), url('./Images/productcon.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
