@@ -25,7 +25,7 @@ function Slider() {
     <div className="slider">
       {sliderArr.map((item, index) => {
         return (
-          <div
+          <div className="carousel-image"
             key={index}
             className="slide"
             style={{ transform: `translateX(${x}%)` }}

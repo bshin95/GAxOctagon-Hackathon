@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import './Dashboard.css'
+import "./Dashboard.css"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { logoutUser } from "../../actions/authActions"
@@ -16,17 +16,16 @@ class Dashboard extends Component {
 
     return (
       <>
-      <div className="dboard-container">
+        <div className="dboard-container">
           <div className="dboard-title">
-            <p>Hi {user.name.split(" ")[0]}!
+            <div>
+              Hi {user.name.split(" ")[0]}!
               <p className="dboard-title">Explore nearby events: </p>
-          </p>
-          
+            </div>
+          </div>
         </div>
-      
-      </div>
         <Footer />
-        </>
+      </>
     )
   }
 }

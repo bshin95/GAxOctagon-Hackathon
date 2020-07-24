@@ -12,6 +12,7 @@ const validateLoginInput = require("../../validation/login")
 // Load User model
 const User = require("../../models/User")
 
+const saltRounds = 10
 // @route POST api/users/register
 // @desc Register user
 // @access Public
@@ -102,6 +103,34 @@ router.post("/login", (req, res) => {
       }
     })
   })
+})
+
+router.get("/:id", async (req, res) => {
+  try {
+    const foundUser = await User.findById(req.params.id).select("-password")
+    res.send(foundUser)
+  } catch (err) {
+    res.status(500).send(err)
+  }
+})
+
+router.put("/:id", async (req, res) => {
+  try {
+    const { password } = req.body
+    if (password.trim()) {
+      req.body.password = bcrypt.hashSync(password.trim(), saltRounds)
+    } else {
+      delete req.body.password
+    }
+
+    const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    })
+    res.send(updatedUser)
+  } catch (err) {
+    console.log("errr===>>>>", err)
+    res.status(500).send(err)
+  }
 })
 
 module.exports = router

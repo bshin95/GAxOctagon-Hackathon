@@ -10,6 +10,7 @@ const UserSchema = new Schema({
   email: {
     type: String,
     required: true,
+    unique: true,
   },
   password: {
     type: String,
@@ -23,6 +24,34 @@ const UserSchema = new Schema({
     type: String,
     required: false,
   },
+  age: {
+    type: Number,
+    required: false,
+  },
+  location: {
+    type: String,
+    required: false,
+  },
+  occupation: {
+    type: String,
+    required: false,
+  },
+  interestOne: {
+    type: String,
+    required: false,
+  },
+  interestTwo: {
+    type: String,
+    required: false,
+  },
+  interestThree: {
+    type: String,
+    required: false,
+  },
+  bio: {
+    type: String,
+    required: false,
+  },
 })
 
-module.exports = User = mongoose.model("users", UserSchema)
+module.exports = mongoose.model("User", UserSchema)

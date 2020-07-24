@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+const { mongoURI } = require("../config/keys")
 
 let MONGODB_URI =
   process.env.PROD_MONGODB ||
@@ -6,7 +7,7 @@ let MONGODB_URI =
   "mongodb://127.0.0.1:27017/octagonDatabase"
 
 mongoose
-  .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
+  .connect(mongoURI, { useUnifiedTopology: true, useNewUrlParser: true })
   .then(() => {
     console.log("Successfully connected to MongoDB.")
   })

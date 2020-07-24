@@ -12,8 +12,11 @@ import Register from "./components/auth/Register"
 import Login from "./components/auth/Login"
 import PrivateRoute from "./components/private-route/PrivateRoute"
 import Dashboard from "./components/dashboard/Dashboard"
+import ProfileComponent from "./components/Profile/ProfileComponent"
+import Stats from "./components/Statistics/Index"
 
 import "./App.css"
+import MyEvents from "./components/EventComponents/MyEvents"
 import styled from "styled-components"
 
 const AppContainer = styled.div`
@@ -48,6 +51,9 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/profile" component={ProfileComponent} />
+            {/* <Route exact path="/events" component={MyEvents} /> */}
+            <Route exact path="/stats" component={Stats} />
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
