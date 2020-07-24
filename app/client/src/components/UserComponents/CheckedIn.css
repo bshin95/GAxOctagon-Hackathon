@@ -1,0 +1,8 @@
+.empty {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0.45)
+  ),
+  url("./EventPhotos/badbunny.jpg");
+  height: 100vh
+}
