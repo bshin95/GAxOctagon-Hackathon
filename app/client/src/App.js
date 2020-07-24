@@ -76,8 +76,8 @@ class App extends Component {
                 component={CheckedIn}
               />
             </Switch>
+            <Route path="/dashboard/map" component={Map} />
             <Route path="/dashboard" component={Footer} />
-            <Route path="/map" component={Map} />
           </AppContainer>
         </Router>
       </Provider>

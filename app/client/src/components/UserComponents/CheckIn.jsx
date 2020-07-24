@@ -22,7 +22,9 @@ export default class CheckIn extends Component {
           <p className="share-button">Share</p>
         </div>
         <div className="venue-buttons">
-          <p className="venue-button">Venue Map</p>
+          <Link to="/dashboard/map">
+            <p className="venue-button">Venue Map</p>
+          </Link>
           <p className="venue-button">Health {'&'} Safety</p>
           <p className="venue-button">Food {'&'} Drink </p>
           <p className="venue-button">Schedule </p>
