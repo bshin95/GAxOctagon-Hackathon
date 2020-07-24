@@ -7,8 +7,6 @@ import { getEvents } from "../../services/event"
 import DashboardNAV from "./DashboardNAV"
 import styled from "styled-components"
 
-import Map from "../MapComponent/Map"
-
 const Search = styled.div`
   display: flex;
   justify-content: center;
@@ -63,7 +61,6 @@ class Dashboard extends Component {
 
     return (
       <>
-        <Map />
         <div className="dboard-container">
           <div className="dboard-title">
             <p className="dboard-text">
