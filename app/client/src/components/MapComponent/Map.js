@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Layout from "./Layout.png"
 
 class Map extends Component {
   render() {
@@ -8,7 +9,7 @@ class Map extends Component {
           <h1>Venue Map</h1>
         </div>
         <div>
-          <img src="https://blog.ticketiq.com/hs-fs/hubfs/BarclaysCenter_BrunoMars_2017-10-04_2016-11-16_1027_SVGC_tn.gif?width=525&name=BarclaysCenter_BrunoMars_2017-10-04_2016-11-16_1027_SVGC_tn.gif"></img>
+          <img src="Layout.png"></img>
         </div>
         <div>
           <p>Entrance - Exits</p>
