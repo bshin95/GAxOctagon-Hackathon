@@ -1,8 +1,11 @@
-.empty {
+.success-container {
   background: linear-gradient(
-    rgba(255, 255, 255, 0.45),
-    rgba(255, 255, 255, 0.45)
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
   ),
-  url("./EventPhotos/badbunny.jpg");
-  height: 100vh
+  url("./EventPhotos/success.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

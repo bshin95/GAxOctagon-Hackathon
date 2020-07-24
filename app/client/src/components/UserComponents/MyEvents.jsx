@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Footer from '../SharedComponents/Footer'
 import './MyEvents.css'
 import { Link } from 'react-router-dom'
 

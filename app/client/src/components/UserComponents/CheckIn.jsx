@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 export default class CheckIn extends Component {
   render() {
     const React = require('react');
+    console.log(React)
     const QRCode = require('qrcode.react');
     return (
       <div className="checkin-container">
