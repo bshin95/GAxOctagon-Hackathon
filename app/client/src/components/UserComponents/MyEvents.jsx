@@ -4,9 +4,7 @@ import './MyEvents.css'
 import { Link } from 'react-router-dom'
 
 export default class MyEvents extends Component {
-  constructor(props) {
-    super(props)
-  }
+
   render () {
     return (
       <>
@@ -40,7 +38,6 @@ export default class MyEvents extends Component {
             </div>
           </Link>
           </div>
-        <Footer />
         </>
     )
   }

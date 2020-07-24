@@ -76,7 +76,6 @@ class Dashboard extends Component {
             </div>
           </div>
         </div>
-        <Route path="/dashboard" component={Footer} />
       </>
     )
   }

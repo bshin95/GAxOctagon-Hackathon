@@ -57,6 +57,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/profile" component={ProfileComponent} />
             <Route exact path="/stats" component={Stats} />
+            
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute
@@ -70,6 +71,7 @@ class App extends Component {
                 component={CheckIn}
               />
             </Switch>
+            <Route path="/dashboard" component={Footer} />
           </AppContainer>
         </Router>
       </Provider>
