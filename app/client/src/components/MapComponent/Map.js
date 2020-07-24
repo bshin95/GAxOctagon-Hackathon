@@ -60,7 +60,6 @@ class Map extends Component {
             </Info>
           </Direction>
         </Container>
-        <Footer />
       </>
     )
   }
