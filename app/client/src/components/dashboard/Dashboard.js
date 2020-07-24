@@ -6,6 +6,7 @@ import { logoutUser } from "../../actions/authActions"
 import Footer from "../SharedComponents/Footer"
 import { getEvents } from '../../services/event'
 import DashboardNAV from './DashboardNAV'
+import {Route} from 'react-router-dom'
 
 class Dashboard extends Component {
   constructor() {
@@ -68,7 +69,7 @@ class Dashboard extends Component {
             </div>
           </div>
         </div>
-        <Footer />
+        <Route path="/dashboard" component={Footer} />
       </>
     )
   }

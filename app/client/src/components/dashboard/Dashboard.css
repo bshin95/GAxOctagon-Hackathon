@@ -13,7 +13,7 @@
 }
 
 .dboard-text {
-  color: #17014C
+  color: #17014C;
 }
 
 :root {
@@ -88,3 +88,16 @@
   background-size: cover;
 }
 
+@media (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
+  /* .sc-fzpans {
+    margin: 0;
+    padding: 0
+  }
+  .nBuaj {
+    margin: 0;
+    padding: 0
+  } */
+}
