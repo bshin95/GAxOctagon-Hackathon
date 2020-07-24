@@ -14,13 +14,16 @@ import PrivateRoute from "./components/private-route/PrivateRoute"
 import Dashboard from "./components/dashboard/Dashboard"
 import ProfileComponent from "./components/Profile/ProfileComponent"
 import Stats from "./components/Statistics/Index"
+// import MyEvents from './components/UserComponents/MyEvents'
 
 import "./App.css"
 import MyEvents from "./components/EventComponents/MyEvents"
 import styled from "styled-components"
+import Footer from "./components/SharedComponents/Footer"
+import CheckIn from "./components/UserComponents/CheckIn"
 
 const AppContainer = styled.div`
-  padding: 1rem;
+  /* padding: 1rem; */
 `
 
 // Check for token to keep user logged in
@@ -56,6 +59,16 @@ class App extends Component {
             <Route exact path="/stats" component={Stats} />
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <PrivateRoute
+                exact
+                path="/dashboard/myevents"
+                component={MyEvents}
+              />
+              <PrivateRoute
+                exact
+                path="/dashboard/checkin"
+                component={CheckIn}
+              />
             </Switch>
           </AppContainer>
         </Router>

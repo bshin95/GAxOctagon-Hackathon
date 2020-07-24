@@ -33,6 +33,10 @@ const EventSchema = new Schema({
       ref: "User",
     },
   ],
+  purchased: {
+    type: String,
+    required: true,
+  },
 })
 
 module.exports = mongoose.model("Event", EventSchema)

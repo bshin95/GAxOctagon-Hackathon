@@ -1,9 +1,9 @@
 import React, { Component } from "react"
-import { Link } from "react-router-dom"
 import "./Footer.css"
 import f1 from "./FooterImages/foot1.jpg"
 import f2 from "./FooterImages/foot2.jpg"
 import f3 from "./FooterImages/foot3.jpg"
+import { Link } from "react-router-dom"
 
 export default class Footer extends Component {
   render() {
@@ -26,6 +26,6 @@ export default class Footer extends Component {
           </Link>
         </div>
       </div>
-    )
+    ) // profile and events page may be /dashboard/profile or /dashboard/myevents
   }
 }

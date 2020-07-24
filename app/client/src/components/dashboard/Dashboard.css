@@ -5,6 +5,103 @@
 }
 
 .dboard-title {
-  font-size: 1.5rem;
-  color: #17014C
+  font-size: 2rem;
+  background: linear-gradient(rgba(23, 1, 76, 0.3), rgba(255, 255, 255, 0.45));
+}
+
+.dboard-text {
+  color: #17014c;
+  padding: 0;
+}
+
+:root {
+  padding: 0;
+  margin: 0;
+}
+
+.events {
+  height: 150px;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.e-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.e-title,
+.e-date,
+.e-purchased {
+  color: white;
+}
+
+.e-title,
+.e-date {
+  width: 30%;
+  text-align: left;
+  margin-left: 4%;
+}
+
+.e-title {
+  font-size: 2.2rem;
+  line-height: normal;
+  margin: 10px 0 0 4%;
+}
+
+.e-date {
+  margin: 10px 0 0 4%;
+}
+
+.e-purchased {
+  align-self: flex-end;
+  margin-right: 4%;
+}
+
+.e1 {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.45),
+      rgba(255, 255, 255, 0.45)
+    ),
+    url("./Images/mlb.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.e2 {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.45),
+      rgba(255, 255, 255, 0.45)
+    ),
+    url("./Images/badbunny.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.e3 {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.45),
+      rgba(255, 255, 255, 0.45)
+    ),
+    url("./Images/productcon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
+  /* .sc-fzpans {
+    margin: 0;
+    padding: 0
+  }
+  .nBuaj {
+    margin: 0;
+    padding: 0
+  } */
 }

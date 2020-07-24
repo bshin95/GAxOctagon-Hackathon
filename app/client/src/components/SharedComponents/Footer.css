@@ -5,15 +5,15 @@
   margin-top: auto;
   height: 20vh;
   width: 100vw;
-  border: 2px solid black;
 }
 
 .footer-button {
   display: flex;
   flex-direction: column;
   margin: auto 0;
+  max-height: 100%
 }
 
 .footer-icon {
-  height: 50px;
+  height: 40px;
 }
