@@ -14,18 +14,19 @@ import PrivateRoute from "./components/private-route/PrivateRoute"
 import Dashboard from "./components/dashboard/Dashboard"
 import ProfileComponent from "./components/Profile/ProfileComponent"
 import Stats from "./components/Statistics/Index"
-import MyEvents from './components/UserComponents/MyEvents'
+import MyEvents from "./components/UserComponents/MyEvents"
 
 import "./App.css"
 import styled from "styled-components"
 import Footer from "./components/SharedComponents/Footer"
 import CheckIn from "./components/UserComponents/CheckIn"
 import CheckedIn from "./components/UserComponents/CheckedIn"
+import Map from "./components/MapComponent/Map"
 
 const AppContainer = styled.div`
   /* padding: 1rem; */
 `
-  
+
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -44,8 +45,6 @@ if (localStorage.jwtToken) {
     // Redirect to login
     window.location.href = "./login"
   }
-
-
 }
 class App extends Component {
   render() {
@@ -58,7 +57,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/profile" component={ProfileComponent} />
             <Route exact path="/stats" component={Stats} />
-            
+
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute
@@ -74,9 +73,11 @@ class App extends Component {
               <PrivateRoute
                 exact
                 path="/dashboard/checkedin"
-                component={CheckedIn} />
+                component={CheckedIn}
+              />
             </Switch>
             <Route path="/dashboard" component={Footer} />
+            <Route path="/map" component={Map} />
           </AppContainer>
         </Router>
       </Provider>

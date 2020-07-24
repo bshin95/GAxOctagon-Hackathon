@@ -6,6 +6,10 @@ const Container = styled.div`
   text-align: center;
 `
 
+const MapLayout = styled.img`
+  width: 50%;
+`
+
 class Map extends Component {
   render() {
     return (
@@ -14,7 +18,7 @@ class Map extends Component {
           <h1>Venue Map</h1>
         </div>
         <div>
-          <img src="Layout.png"></img>
+          <MapLayout src={Layout}></MapLayout>
         </div>
         <div>
           <p>Entrance - Exits</p>
