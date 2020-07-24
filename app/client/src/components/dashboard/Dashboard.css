@@ -7,6 +7,8 @@
 .dboard-title {
   font-size: 2rem;
   background: linear-gradient(rgba(23, 1, 76, 0.3), rgba(255, 255, 255, 0.45));
+  margin: 0;
+  padding: 0
 }
 
 .dboard-text {
@@ -14,21 +16,18 @@
   padding: 0;
 }
 
-:root {
-  padding: 0;
-  margin: 0;
-}
-
 .events {
   height: 150px;
   width: 90%;
   margin: 20px auto;
   border-radius: 10px;
+  max-width: 800px
 }
 
 .e-container {
   display: flex;
   flex-direction: column;
+  
 }
 
 .e-title,
@@ -100,12 +99,4 @@
   html {
     font-size: 10px;
   }
-  /* .sc-fzpans {
-    margin: 0;
-    padding: 0
-  }
-  .nBuaj {
-    margin: 0;
-    padding: 0
-  } */
 }
