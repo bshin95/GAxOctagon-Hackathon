@@ -1,0 +1,55 @@
+.checkin-container {
+  display:flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;;
+}
+
+.event-info {
+  background: linear-gradient(
+    rgba(23, 1, 76, 0.3), 
+    rgba(255, 255, 255, 0.45)
+  )
+}
+
+.event-title, .event-venue, .event-date,.event-seating {
+  color:#17014C;
+}
+
+.event-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 40px 0 8px 0
+}
+
+.qrcode-container {
+  margin-top: 20px;
+}
+
+.share-button {
+  padding: 5px 10px 5px 10px;
+  margin: 0 auto;
+  width: 30%;
+  border-radius: 5px;
+  background-color: #6D6A95;
+  color: white;
+  font-size: 1.2rem
+}
+
+.venue-buttons {
+  margin-top: 20px;
+  width: 50%;
+  margin: 10px auto;
+  font-size: 1.5rem
+}
+
+.venue-button {
+  padding: 5px 20px 5px 20px;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #17014C;
+  color: white;
+  margin-top: 5px;
+  text-align: left;
+}
